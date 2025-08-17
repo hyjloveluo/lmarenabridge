@@ -1,0 +1,27 @@
+{
+  "o3-xxx": [
+    {
+      "session_id": "b2096d33-2651-4802-97c1-c9b788c01c7a",
+      "message_id": "151968ec-b43f-4d0b-a655-e508156af578",
+      "mode": "direct_chat"
+    },
+    {
+      "session_id": "session_for_battle_A",
+      "message_id": "message_for_battle_A",
+      "mode": "battle",
+      "battle_target": "A"
+    },
+    {
+      "session_id": "session_for_battle_B",
+      "message_id": "message_for_battle_B",
+      "mode": "battle",
+      "battle_target": "B"
+    }
+  ],
+  "gemini-xxx": {
+      "session_id": "session_for_battle_A",
+      "message_id": "message_for_battle_A",
+      "mode": "battle",
+      "battle_target": "A"
+    }
+}

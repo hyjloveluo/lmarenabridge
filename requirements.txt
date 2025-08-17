@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+requests
+packaging
+aiohttp

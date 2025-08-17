@@ -1,0 +1,68 @@
+{
+  // 版本号
+  // 用于程序更新检查，请不要手动修改。
+  "version": "2.6.1",
+
+  // --- 会话设置 ---
+  // 当前 LMArena 页面的会话 ID。
+  // 通过运行 id_updater.py 可以自动更新。
+  "session_id": "eb89f76a-91c9-4a68-89d8-f48783dfea0a",
+
+  // 当前会话的最后一条消息 ID。
+  // 通过运行 id_updater.py 可以自动更新。
+  "message_id": "13639031-cf51-4d86-8f31-13fe28c684fb",
+
+  // --- ID 更新器专用配置 ---
+  // id_updater.py 上次使用的模式 ('direct_chat' 或 'battle')
+  "id_updater_last_mode": "direct_chat",
+  // id_updater.py 在 Battle 模式下，要更新的目标 ('A' 或 'B')
+  "id_updater_battle_target": "A",
+
+  // --- 更新设置 ---
+  // 开关：自动检查更新
+  // 设置为 true，程序启动时会连接到 GitHub 检查新版本。
+  "enable_auto_update": true,
+
+  // --- 功能开关 ---
+
+  // 功能开关：绕过敏感词检测
+  // 在原始用户请求的对话中，额外注入一个内容为空的用户消息，以尝试绕过敏感词审查。
+  "bypass_enabled": true,
+
+  // 功能开关：酒馆模式 (Tavern Mode)
+  // 此模式专为需要完整历史记录注入的场景设计（如酒馆AI、SillyTavern等）。
+  "tavern_mode_enabled": false,
+
+  // --- 模型映射设置 ---
+
+  // 开关：当模型映射不存在时，使用默认ID
+  // 如果设置为 true，当请求的模型在 model_endpoint_map.json 中找不到时，
+  // 将会使用 config.jsonc 中定义的全局 session_id 和 message_id。
+  // 如果设置为 false，找不到映射时将返回错误。
+  "use_default_ids_if_mapping_not_found": true,
+
+  // --- 高级设置 ---
+
+  // 流式响应超时时间（秒）
+  // 服务器等待来自浏览器的下一个数据块的最长时间。非流式也使用此值。
+  // 如果您的网络连接较慢或模型响应时间很长，可以适当增加此值。
+  "stream_response_timeout_seconds": 360,
+
+  // --- 自动重启设置 ---
+
+  // 开关：启用空闲自动重启
+  // 当服务器在指定时间内（如下所设）没有收到任何 API 请求时，将自动重启。
+  "enable_idle_restart": true,
+
+  // 空闲重启超时时间（秒）
+  // 服务器在“检查与更新完毕”后，若超过此时长未收到任何请求，则会重启。
+  // 5分钟 = 300秒。设置为 -1 可禁用此超时功能（即使上面开关为true）。
+  "idle_restart_timeout_seconds": -1,
+
+  // --- 安全设置 ---
+
+  // API Key
+  // 设置一个 API Key 来保护您的服务。
+  // 如果设置了此值，所有到 /v1/chat/completions 的请求都必须在 Authorization 头部中包含正确的 Bearer Token。
+  "api_key": ""
+}
